@@ -34,5 +34,5 @@ docker ps
 
 ```sh
 cd server
-docker image build -t syntiab/meteo-alerts-server:latest .
+docker image build -t DOCKERHUB_USERNAME/meteo-alerts-server:latest .
 ```
