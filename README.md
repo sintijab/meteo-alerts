@@ -1,6 +1,6 @@
-Information about the weather is collected from origins: <br>
-
 # MeteoAlerts
+
+Information about the weather is collected from origins: <br>
 
 1. [WeatherAPI.com](https://rapidapi.com/weatherapi/api/weatherapi-com),
    [API schema specs](https://app.swaggerhub.com/apis-docs/WeatherAPI.com/WeatherAPI/1.0.2#/APIs/forecast-weather)
