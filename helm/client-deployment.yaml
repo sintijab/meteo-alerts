@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: meteo-alerts-client-deployment
+  name: meteo-alerts-client
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: meteo-alerts-client
@@ -30,5 +30,5 @@ spec:
     app: meteo-alerts-client
   ports:
   - protocol: TCP
-    port: 3000
+    port: 80
     targetPort: 3000

@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: meteo-alerts-server-deployment
+  name: meteo-alerts-server
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: meteo-alerts-server
@@ -29,6 +29,6 @@ spec:
   selector:
     app: meteo-alerts-server
   ports:
-  - port: 4000
+  - port: 80
     targetPort: 4000
     protocol: TCP
