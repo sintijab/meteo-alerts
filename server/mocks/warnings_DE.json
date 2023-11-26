@@ -1,0 +1,49 @@
+{
+    "api": "https://visservice.meteoalarm.org/api/v1/stream-buffers/live/features/fddd5e10-dd9f-4ce2-a352-c92304a36b30/warnings?language=en&referenceDate=2023-11-26T14:20:28.783Z&preset=now",
+    "warnings": [
+        {
+            "bb": [
+                [
+                    13.086590740422464,
+                    52.36720658638611
+                ],
+                [
+                    13.746638172470945,
+                    52.674870276720384
+                ]
+            ],
+            "description": {
+                "de": "Es tritt leichter Frost zwischen -2 °C und -4 °C auf.",
+                "en": "There is a risk of frost (Level 1 of 2).\nMinimum temperature: -2 - -4 °C",
+                "es": "Existe el riesgo de que se produzca helada. (Nivel 1 de 2)\nTemperatura mín.: -2 - -4 °C",
+                "fr": "Il y a un risque de gel (Niveau 1 sur 2).\nTempérature minimale: -2 - -4 °C"
+            },
+            "disclaimers": [],
+            "endDate": "2023-11-27T09:00:00.000000Z",
+            "featureId": "fddd5e10-dd9f-4ce2-a352-c92304a36b30",
+            "headline": {
+                "de": "Amtliche WARNUNG vor FROST",
+                "en": "Official WARNING of FROST",
+                "es": "AVISO oficial de HELADA",
+                "fr": "ALERTE officielle INTEMPÉRIES pour GEL"
+            },
+            "id": "92f0be00-05d1-4ed9-bf1c-0866dc5b24b6",
+            "instruction": {
+                "de": "",
+                "en": "",
+                "es": "",
+                "fr": ""
+            },
+            "levelId": 3,
+            "name": "Berlin",
+            "originator": {
+                "logoUrl": null,
+                "name": "Deutscher Wetterdienst",
+                "url": "https://www.wettergefahren.de"
+            },
+            "regionCode": "DE",
+            "startDate": "2023-11-26T15:00:00.000000Z",
+            "typeId": 6
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meteo-alerts-client-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: meteo-alerts-client
+  template:
+    metadata:
+      labels:
+        app: meteo-alerts-client
+    spec:
+      containers:
+      - name: meteo-alerts-client
+        image: syntiab/meteo-alerts-client
+        ports:
+        - containerPort: 3000
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: meteo-alerts-client-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: meteo-alerts-client
+  ports:
+  - protocol: TCP
+    port: 3000
+    targetPort: 3000
