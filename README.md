@@ -21,7 +21,7 @@ docker image build -t DOCKERHUB_USERNAME/meteo-alerts-client:latest .
 
 ```sh
 # docker run -p [host_port]:[container_port]  [image_id/image_tag]
-docker run -p 3001:3000 DOCKERHUB_USERNAME/meteo-alerts-client
+docker run -p 3000:3000 DOCKERHUB_USERNAME/meteo-alerts-client
 ```
 
 ### List Docker containers
