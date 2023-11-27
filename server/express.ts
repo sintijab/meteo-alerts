@@ -1,4 +1,4 @@
-const express = require('express');
+import express, { Request, Response } from 'express';
 var cors = require('cors')
 const fs = require('fs');
 const path = require('path');
@@ -24,7 +24,7 @@ app.use(cors(corsOptions))
 // create application/x-www-form-urlencoded parser
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-app.get('/', (req, res) => {
+app.get('/', (req: Request, res: Response) => {
     res.header('Content-Type', 'application/json');
     res.send(JSON.stringify({ data: 'Success' }));
     // res.json({ data: 'Success'});
@@ -34,6 +34,7 @@ app.get('/api/:country', (req, res) => {
     const url = req.params.country;
     const fileRes = url.replace('/api', '');
     const filePath = path.join(__dirname, `mocks/${fileRes}`);
+    // @ts-ignore
     fs.readFile(filePath, { encoding: 'utf-8' }, (err, data) => {
       if (!err) {
         res.writeHead(200, {'Content-Type': 'application/json'});
@@ -53,6 +54,7 @@ app.post('/address_lookup', urlencodedParser, (req, res) => {
     if (address.includes('Germany')) { // Google places API
       req.url = "/api/warnings_DE.json";
       req.method = 'GET';
+      // @ts-ignore
       app.handle(req, res);
     } else {
       res.statusCode = 400;
